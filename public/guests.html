@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HotelEase | Guests</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">HotelEase</span>
+    <a href="index.html">Dashboard</a>
+    <a href="rooms.html">Rooms</a>
+    <a class="active" href="guests.html">Guests</a>
+    <a href="bookings.html">Bookings</a>
+  </nav>
+
+  <main class="container">
+    <h1>Guests</h1>
+    <p class="subtitle">Add and view hotel guests.</p>
+
+    <form id="guestForm">
+      <h2>Add Guest</h2>
+
+      <div class="form-grid">
+        <div>
+          <label for="fullName">Full Name *</label>
+          <input id="fullName" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone Number *</label>
+          <input id="phone" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email">
+        </div>
+
+        <div>
+          <label for="idProofNumber">ID Proof Number</label>
+          <input id="idProofNumber">
+        </div>
+
+        <div class="full-width">
+          <label for="address">Address</label>
+          <textarea id="address"></textarea>
+        </div>
+
+        <div class="full-width">
+          <button type="submit">Add Guest</button>
+        </div>
+      </div>
+
+      <div id="guestMessage" class="message"></div>
+    </form>
+
+    <section class="table-wrapper">
+      <h2>Guest List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>ID Proof</th>
+          </tr>
+        </thead>
+        <tbody id="guestsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/guests.js"></script>
+</body>
+</html>

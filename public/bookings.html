@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HotelEase | Bookings</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">HotelEase</span>
+    <a href="index.html">Dashboard</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="guests.html">Guests</a>
+    <a class="active" href="bookings.html">Bookings</a>
+  </nav>
+  <main class="container">
+    <h1>Bookings</h1>
+    <p class="subtitle">Create and manage hotel reservations.</p>
+
+    <form id="bookingForm">
+      <h2>Create Booking</h2>
+
+      <div class="form-grid">
+        <div>
+          <label for="guestId">Guest *</label>
+          <select id="guestId" required>
+            <option value="">Select a guest</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="roomId">Available Room *</label>
+          <select id="roomId" required disabled>
+            <option value="">Select dates first</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="checkInDate">Check-in Date *</label>
+          <input id="checkInDate" type="date" required>
+        </div>
+
+        <div>
+          <label for="checkOutDate">Check-out Date *</label>
+          <input id="checkOutDate" type="date" required>
+        </div>
+
+        <div>
+          <button type="button" class="secondary" id="findRoomsButton">
+            Find Available Rooms
+          </button>
+        </div>
+
+        <div>
+          <label>Estimated Total</label>
+          <input id="estimatedAmount" value="₹0.00" readonly>
+        </div>
+
+        <div class="full-width">
+          <button type="submit">Create Booking</button>
+        </div>
+      </div>
+
+      <div id="bookingMessage" class="message"></div>
+    </form>
+
+    <section class="table-wrapper">
+      <h2>All Bookings</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Guest</th>
+            <th>Room</th>
+            <th>Dates</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="bookingsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/bookings.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HotelEase | Rooms</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">HotelEase
+
+</span>
+    <a href="index.html">Dashboard</a>
+    <a class="active" href="rooms.html">Rooms</a>
+    <a href="guests.html">Guests</a>
+    <a href="bookings.html">Bookings</a>
+  </nav>
+
+  <main class="container">
+    <h1>Rooms</h1>
+    <p class="subtitle">View and manage room status.</p>
+
+    <div id="roomMessage" class="message"></div>
+
+    <section class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Room Number</th>
+            <th>Type</th>
+            <th>Price / Night</th>
+            <th>Status</th>
+            <th>Change Status</th>
+          </tr>
+        </thead>
+        <tbody id="roomsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/rooms.js"></script>
+</body>
+</html>
