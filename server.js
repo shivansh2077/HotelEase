@@ -1,6 +1,9 @@
 require("dotenv").config();
 
 const express = require("express");
+app.get("/api/ping", (req, res) => {
+  res.json({ ok: true, message: "Express server is running on Vercel" });
+});
 const path = require("path");
 
 const roomRoutes = require("./routes/rooms");
