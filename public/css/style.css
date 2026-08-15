@@ -441,7 +441,30 @@ body{
   font-weight: 450;
   font-style: normal;
 }
+/* =========================================================
+   MOBILE TABLE SCROLL
+   ========================================================= */
 
+@media (max-width: 750px) {
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .table-wrapper table {
+    width: max-content;
+    min-width: 700px;
+  }
+
+  .table-wrapper td,
+  .table-wrapper th {
+    white-space: nowrap;
+  }
+}
 .brand-icon {
   font-size: 22px;
   line-height: 1;
