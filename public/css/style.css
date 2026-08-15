@@ -356,6 +356,92 @@ nav .brand {
   gap: 8px;
 }
 
+/* =========================================================
+   FINAL POLISH
+   ========================================================= */
+
+/* ---------- FONT ---------- */
+
+/* Import Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Everything except the main headings */
+body,
+nav,
+nav a,
+.subtitle,
+p,
+label,
+input,
+select,
+textarea,
+button,
+table,
+th,
+td,
+.badge,
+.message,
+.actions {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* ---------- TABLE OUTER ROUNDED EDGES ---------- */
+
+.table-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+
+/* Top corners */
+.table-wrapper table thead tr:first-child th:first-child {
+  border-top-left-radius: 14px;
+}
+
+.table-wrapper table thead tr:first-child th:last-child {
+  border-top-right-radius: 14px;
+}
+
+
+/* Bottom corners */
+.table-wrapper table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 14px;
+}
+
+.table-wrapper table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 14px;
+}
+
+
+/* ---------- DASHBOARD CARD HOVER ---------- */
+
+.stat-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Override your old scale(1.07) */
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(103, 34, 34, 0.14);
+}
+h1, h2, h3  {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+
 .brand-icon {
   font-size: 22px;
   line-height: 1;
