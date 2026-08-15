@@ -10,9 +10,14 @@ router.get("/", async (req, res) => {
     );
 
     res.json(rooms);
-  } catch (error) {
-    res.status(500).json({ message: "Could not fetch rooms." });
-  }
+//   } catch (error) {
+//     res.status(500).json({ message: "Could not fetch rooms." });
+//   }
+// });
+      } catch (error) {
+  console.error("GET /api/rooms failed:", error);
+  res.status(500).json({ message: "Could not fetch rooms." });
+}
 });
 
 router.get("/available", async (req, res) => {
@@ -42,15 +47,15 @@ router.get("/available", async (req, res) => {
     );
 
     res.json(rooms);
-//   } catch (error) {
-//     res.status(500).json({ message: "Could not find available rooms." });
-//   }
-// });
   } catch (error) {
-  console.error("GET /api/rooms failed:", error);
-  res.status(500).json({ message: "Could not fetch rooms." });
-}
+    res.status(500).json({ message: "Could not find available rooms." });
+  }
 });
+//   } catch (error) {
+//   console.error("GET /api/rooms failed:", error);
+//   res.status(500).json({ message: "Could not fetch rooms." });
+// }
+// });
 router.put("/:id/status", async (req, res) => {
   const { status } = req.body;
   const allowedStatuses = ["available", "occupied", "maintenance"];
